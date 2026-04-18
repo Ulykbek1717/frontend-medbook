@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+:root {
+  --ink-900: #0e1728;
+  --ink-800: #17233a;
+  --blue-900: #08336f;
+  --blue-700: #0d5cad;
+  --blue-650: #1f59a8;
+  --blue-600: #2e66b8;
+  --muted: #66758d;
+  --surface: #f6f8fc;
+  --card: rgba(255, 255, 255, 0.9);
+  --border: rgba(22, 42, 78, 0.08);
+  --shadow: 0 20px 44px rgba(17, 37, 73, 0.08);
+  --font-ui: 'Manrope', sans-serif;
+  --font-display: 'Cormorant Garamond', serif;
+
+  font-family: var(--font-ui);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--ink-800);
+  background: var(--surface);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(225, 233, 245, 0.72), transparent 28%),
+    radial-gradient(circle at 90% 16%, rgba(214, 225, 241, 0.48), transparent 24%),
+    linear-gradient(180deg, #f8fbff 0%, #f5f8fc 100%);
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--font-ui);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  appearance: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  display: block;
+}
+
+#root {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+::selection {
+  background: rgba(13, 92, 173, 0.18);
+  color: var(--ink-900);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .auth-shell,
+  .dashboard-shell,
+  .glass-card,
+  .login-card,
+  .auth-copy,
+  .page-head,
+  .sidebar,
+  .specialist-card,
+  .appointment-card,
+  .patient-note-card,
+  .calendar-card,
+  .next-appointments,
+  .shift-card,
+  .oncall-card {
+    animation: rise 520ms ease both;
+  }
+
+  .specialist-card:nth-child(2),
+  .appointment-card:nth-child(2),
+  .patient-note-card:nth-child(2) {
+    animation-delay: 80ms;
+  }
+
+  .specialist-card:nth-child(3),
+  .appointment-card:nth-child(3) {
+    animation-delay: 140ms;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
